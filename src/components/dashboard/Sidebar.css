@@ -1,0 +1,133 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #fff;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar--open {
+  transform: translateX(0);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.sidebar__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sidebar__close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar__close:hover {
+  background-color: #333;
+}
+
+.sidebar__nav {
+  padding: 1rem 0;
+}
+
+.sidebar__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar__menu-item {
+  margin: 0;
+}
+
+.sidebar__menu-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebar__menu-link:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.sidebar__menu-link.active {
+  background-color: #4CAF50;
+  color: #fff;
+  border-left-color: #4CAF50;
+}
+
+.sidebar__menu-icon {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.sidebar__menu-label {
+  font-weight: 500;
+}
+
+.sidebar__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  border-top: 1px solid #333;
+}
+
+.sidebar__footer-link {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar__footer-link:hover {
+  color: #66bb6a;
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    transform: translateX(0);
+  }
+  
+  .sidebar__close {
+    display: none;
+  }
+  
+  .sidebar-overlay {
+    display: none;
+  }
+}

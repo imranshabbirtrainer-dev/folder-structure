@@ -1,0 +1,10 @@
+.website-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.website-layout__main {
+  flex: 1;
+  padding: 0;
+}

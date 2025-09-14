@@ -1,0 +1,166 @@
+.header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.header__menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header__logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.header__nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header__nav-link {
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.header__nav-link:hover {
+  color: #333;
+}
+
+.header__nav-link.active {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.header__nav-link--cta {
+  background-color: #007bff;
+  color: white !important;
+  border-radius: 6px;
+}
+
+.header__nav-link--cta:hover {
+  background-color: #0056b3;
+}
+
+/* Dashboard specific styles */
+.header--dashboard {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.header--dashboard .header__logo a {
+  color: #fff;
+}
+
+.header--dashboard .header__nav-link {
+  color: #ccc;
+}
+
+.header--dashboard .header__nav-link:hover {
+  color: #fff;
+}
+
+.header--dashboard .header__nav-link.active {
+  color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+/* User menu styles */
+.header__user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__user-name {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.header__logout-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header__logout-btn:hover {
+  background: #c82333;
+}
+
+.header--dashboard .header__logout-btn {
+  background: #dc3545;
+}
+
+.header--dashboard .header__logout-btn:hover {
+  background: #c82333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header__menu-btn {
+    display: block;
+  }
+  
+  .header__nav {
+    display: none;
+  }
+  
+  .header__user-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+  }
+  
+  .header__user-name {
+    font-size: 0.8rem;
+  }
+  
+  .header__logout-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
